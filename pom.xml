@@ -4,8 +4,8 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>Nautical-education-examination-system</groupId>
-  <artifactId>com.navigational.education</artifactId>
+  <groupId>com.navigational.education</groupId>
+  <artifactId>Nautical-education-examination-system</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
 
