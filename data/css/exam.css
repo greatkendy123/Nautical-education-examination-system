@@ -1,0 +1,24 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-size: 20px;
+}
+#title{
+    color: red;
+}
+#info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+label{
+    font-size: 20px;
+}
+#support{
+    text-align: center;
+}
+.question{
+    margin: 10px;
+}
