@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.web.WebView?>
+<?import org.controlsfx.control.MaskerPane?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="navigation.controller.WebController"
+            prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <StackPane>
+            <WebView fx:id="webView"></WebView>
+            <MaskerPane fx:id="mask"></MaskerPane>
+        </StackPane>
+
+    </center>
+
+</BorderPane>

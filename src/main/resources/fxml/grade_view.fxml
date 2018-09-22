@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="navigation.controller.GradeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/grade_css.css"></URL>
+    </stylesheets>
+    <center>
+        <TableView fx:id="table">
+
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem text="查看" fx:id="showTest"></MenuItem>
+                        <MenuItem text="删除" fx:id="deleteTest"></MenuItem>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+
+            <columns>
+                <TableColumn fx:id="order" text="序号"></TableColumn>
+                <TableColumn fx:id="date" text="日期"></TableColumn>
+                <TableColumn fx:id="score" text="得分"></TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

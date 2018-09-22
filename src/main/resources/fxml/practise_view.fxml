@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@/css/practise_css.css"></URL>
+    </stylesheets>
+    <center>
+
+     <BorderPane fx:id="container">
+
+         <center>
+        <ScrollPane>
+            <VBox fx:id="questionContainer">
+
+                <children>
+
+                    <!--题序-->
+                    <HBox>
+                        <padding>
+                            <Insets>
+                                <top>10.0</top>
+                                <left>10.0</left>
+                                <right>10.0</right>
+                            </Insets>
+                        </padding>
+                        <children>
+                            <Text fx:id="order"></Text>
+                        </children>
+                    </HBox>
+
+                    <!--题目-->
+                    <VBox alignment="CENTER">
+                        <HBox>
+                            <padding>
+                                <Insets>
+                                    <top>10.0</top>
+                                    <left>20.0</left>
+                                    <right>20.0</right>
+                                    <bottom>10.0</bottom>
+                                </Insets>
+                            </padding>
+                            <children>
+                                <Text fx:id="question"></Text>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fx:id="pictureBox">
+                            <padding>
+                                <Insets>
+                                    <top>10.0</top>
+                                    <bottom>10.0</bottom>
+                                </Insets>
+                            </padding>
+                            <ScrollPane minWidth="0.0" minHeight="0.0">
+                                <ImageView fx:id="questionPicture">
+
+                                </ImageView>
+                            </ScrollPane>
+                        </HBox>
+                    </VBox>
+
+
+
+                    <!--选项部分-->
+
+                    <VBox spacing="10.0">
+                        <padding>
+                            <Insets>
+                                <left>30.0</left>
+                                <right>30.0</right>
+                            </Insets>
+                        </padding>
+                        <children>
+
+                            <HBox fx:id="select" spacing="20.0">
+                                <children>
+                                    <RadioButton text="A"  fx:id="A" styleClass="select" wrapText="true" userData="A">
+                                        <toggleGroup>
+                                            <ToggleGroup fx:id="selectGroup"/>
+                                        </toggleGroup>
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                            <HBox>
+                                <children>
+                                    <RadioButton text="B" toggleGroup="$selectGroup" fx:id="B" styleClass="select" wrapText="true" userData="B">
+
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                            <HBox>
+                                <children>
+                                    <RadioButton text="C" toggleGroup="$selectGroup" fx:id="C" styleClass="select" wrapText="true" userData="C">
+
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                            <HBox>
+                                <children>
+                                    <RadioButton text="D" toggleGroup="$selectGroup" fx:id="D" styleClass="select" wrapText="true" userData="D">
+
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                        </children>
+
+                    </VBox>
+
+                </children>
+
+            </VBox>
+        </ScrollPane>
+         </center>
+         <right>
+                   <ScrollPane fitToWidth="true" fitToHeight="true">
+                       <VBox spacing="20.0" fx:id="cardContainer">
+                           <HBox alignment="CENTER" style="-fx-background-color: gray">
+                               <Text text="答题卡" fx:id="card"></Text>
+                           </HBox>
+                           <HBox alignment="CENTER">
+                               <JFXButton contentDisplay="TOP" text="60:00" fx:id="time">
+                                   <graphic>
+                                       <ImageView fitWidth="50.0" fitHeight="50.0">
+                                           <image>
+                                               <Image url="@/images/function/timer.png"/>
+                                           </image>
+                                       </ImageView>
+                                   </graphic>
+                               </JFXButton>
+                           </HBox>
+                           <HBox alignment="CENTER">
+                               <Group autoSizeChildren="true" fx:id="group">
+
+                                   <FlowPane fx:id="flowPane"  prefWrapLength="290" alignment="CENTER_LEFT" maxWidth="300">
+                                       <padding>
+                                           <Insets>
+                                               <left>10.0</left>
+                                               <right>10.0</right>
+                                           </Insets>
+                                       </padding>
+
+                                   </FlowPane>
+                               </Group>
+                           </HBox>
+                           <HBox alignment="CENTER">
+                               <Rectangle  width="20.0" height="20.0" fx:id="rect"></Rectangle>
+                               <Label text="已做"></Label>
+                               <HBox>
+                                   <padding>
+                                       <Insets>
+                                           <left>10.0</left>
+                                       </Insets>
+                                   </padding>
+                                   <Rectangle width="20.0" height="20.0" style="-fx-fill: red"></Rectangle>
+                                   <Label text="未做"></Label>
+                               </HBox>
+                           </HBox>
+                           <HBox alignment="CENTER">
+                               <JFXButton text="添加笔记" fx:id="addNote"  styleClass="function_button"></JFXButton>
+                           </HBox>
+                           <HBox alignment="CENTER">
+                               <JFXButton text="确定交卷" fx:id="handOn" styleClass="function_button">
+
+                               </JFXButton>
+                           </HBox>
+                       </VBox>
+                   </ScrollPane>
+         </right>
+
+     </BorderPane>
+
+    </center>
+
+
+</BorderPane>

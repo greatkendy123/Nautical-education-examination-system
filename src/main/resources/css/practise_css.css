@@ -1,0 +1,31 @@
+#pages{
+
+}
+#question{
+    -fx-font-size: 20.0;
+}
+.select{
+    -fx-font-size: 18.0;
+}
+#time{
+    -fx-font-size: 18.0
+}
+.function_button{
+    -fx-background-color: red;
+    -fx-font-size: 20.0;
+    -fx-text-fill: white
+}
+#order{
+    -fx-font-size: 22.0;
+    -fx-text-fill: green;
+}
+#rect{
+    -fx-fill: green;
+}
+#group Button{
+    -fx-border-color: red;
+    -fx-border-width: 1.0;
+}
+#card{
+    -fx-font-size: 22px;
+}

@@ -1,0 +1,19 @@
+#statusBar{
+    -fx-background-color: blue;
+}
+#save{
+    -fx-background-color: green;
+    -fx-font-size: 16.0;
+    -fx-text-fill: white;
+}
+#cancel{
+    -fx-background-color: red;
+    -fx-font-size: 16.0;
+    -fx-text-fill: white;
+}
+#title{
+    -fx-font-size: 18px;
+}
+#textArea{
+    -fx-font-size: 20px;
+}

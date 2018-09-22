@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/simulation_exam_select_css.css"></URL>
+    </stylesheets>
+    <top>
+        <VBox>
+            <padding>
+                <Insets>
+                    <bottom>10.0</bottom>
+                </Insets>
+            </padding>
+            <children>
+                <HBox alignment="CENTER">
+                    <Text fx:id="secondTitle"></Text>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <Text fx:id="threeTitle"></Text>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <JFXButton text="进入考场" contentDisplay="LEFT" fx:id="start">
+            <graphic>
+                <ImageView fitWidth="100.0" fitHeight="100.0">
+                    <Image url="@/images/function/computer.png">
+                    </Image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </center>
+</BorderPane>

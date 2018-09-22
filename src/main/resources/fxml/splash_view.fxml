@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0" fx:controller="navigation.controller.SplashController">
+        <center>
+            <ImageView fitHeight="300" fitWidth="500" fx:id="icon">
+                <image>
+                    <Image url="@/images/splash.jpeg"></Image>
+                </image>
+            </ImageView>
+        </center>
+</BorderPane>

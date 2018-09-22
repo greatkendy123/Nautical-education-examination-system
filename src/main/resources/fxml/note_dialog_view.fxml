@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/note_dialog_css.css"></URL>
+    </stylesheets>
+    <top>
+        <HBox fx:id="statusBar">
+            <JFXButton text="添加笔记" fx:id="title">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@/images/icon.png"></Image>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </JFXButton>
+        </HBox>
+    </top>
+    <center>
+        <TextArea fx:id="textArea"></TextArea>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="5.0">
+            <padding>
+                <Insets>
+                    <top>5.0</top>
+                    <bottom>5.0</bottom>
+                </Insets>
+            </padding>
+            <JFXButton fx:id="save" text="保存"></JFXButton>
+            <JFXButton fx:id="cancel" text="取消"></JFXButton>
+        </HBox>
+    </bottom>
+
+</BorderPane>

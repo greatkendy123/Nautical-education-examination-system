@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="navigation.controller.SelectLessonController"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/lesson_select_css.css"></URL>
+    </stylesheets>
+    <top>
+       <HBox>
+           <padding>
+               <Insets>
+                   <top>10</top>
+                   <left>10</left>
+                   <bottom>10</bottom>
+               </Insets>
+           </padding>
+           <children>
+               <Text text="选择课程" fx:id="title"></Text>
+           </children>
+       </HBox>
+    </top>
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn text="序号" fx:id="order"></TableColumn>
+                <TableColumn text="课程名称" fx:id="subjectName"></TableColumn>
+                <TableColumn text="状态" fx:id="subjectStatus"></TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

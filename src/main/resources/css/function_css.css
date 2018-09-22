@@ -1,0 +1,8 @@
+#canvas{
+    -fx-background-color: Red;
+}
+#function{
+    -fx-background-image: url("../images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}

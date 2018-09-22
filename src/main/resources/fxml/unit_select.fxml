@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="navigation.controller.UnitSelectController"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/unit_select_css.css"></URL>
+    </stylesheets>
+<top>
+   <VBox>
+       <padding>
+           <Insets>
+               <bottom>10.0</bottom>
+           </Insets>
+       </padding>
+       <children>
+           <HBox alignment="CENTER">
+               <Text fx:id="secondTitle"></Text>
+           </HBox>
+           <HBox alignment="CENTER">
+               <Text fx:id="threeTitle"></Text>
+           </HBox>
+       </children>
+   </VBox>
+</top>
+    <center>
+        <TableView fx:id="dataTable">
+            <columns>
+                <TableColumn text="序号" fx:id="order"></TableColumn>
+                <TableColumn text="标题" fx:id="title"></TableColumn>
+                <TableColumn text="考试时间" fx:id="time"></TableColumn>
+                <TableColumn text="总分" fx:id="score"></TableColumn>
+                <TableColumn text="练习次数" fx:id="times"></TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+
+</BorderPane>

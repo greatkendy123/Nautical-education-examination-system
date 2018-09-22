@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="navigation.controller.AboutController"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/about_css.css" ></URL>
+    </stylesheets>
+    <center>
+        <VBox spacing="10.0">
+            <HBox alignment="CENTER">
+                <ImageView fitWidth="100.0" fitHeight="100.0">
+                    <image>
+                        <Image url="@/images/icon.png">
+
+                        </Image>
+                    </image>
+                </ImageView>
+
+            </HBox>
+            <HBox alignment="CENTER">
+                <children>
+                    <Text fx:id="title">航海类教育考试系统v3.0</Text>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Text styleClass="version">jdk版本:1.8.0_181</Text>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Text styleClass="version">sqlite版本：3.23.1</Text>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
