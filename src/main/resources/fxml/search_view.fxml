@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import org.controlsfx.control.MaskerPane?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="navigation.controller.SearchController"
             prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/css/search_css.css"></URL>
+    </stylesheets>
+    <top>
+        <VBox>
+            <HBox alignment="CENTER">
+                <Label wrapText="true" text="试题查找,智能搜索,精确匹配" alignment="CENTER" fx:id="main_title"></Label>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Label wrapText="true" alignment="CENTER" text="根据所需要查找的关键字搜索题目,一键直达,想做什么就做什么题" fx:id="second_title"></Label>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <BorderPane>
+            <padding>
+                <Insets>
+                    <left>5.0</left>
+                    <right>5.0</right>
+                </Insets>
+            </padding>
+            <left>
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets>
+                            <right>10.0</right>
+                        </Insets>
+                    </padding>
+                    <HBox spacing="3.0" alignment="CENTER">
+                        <TextField></TextField>
+                        <JFXButton text="搜索"></JFXButton>
+                    </HBox>
+                    <HBox>
+                        <TableView fx:id="tableView">
+                            <columns>
+                                <TableColumn text="序号" fx:id="order"></TableColumn>
+                                <TableColumn text="试题" fx:id="question"></TableColumn>
+                                <TableColumn text="题型" fx:id="type"></TableColumn>
+                            </columns>
+                        </TableView>
+                    </HBox>
+                </VBox>
+            </left>
+            <center>
+               <StackPane>
+                   <WebView fx:id="webView">
+
+                   </WebView>
+                   <MaskerPane fx:id="loadProgress">
+
+                   </MaskerPane>
+               </StackPane>
+
+            </center>
+        </BorderPane>
+    </center>
 
 </BorderPane>
