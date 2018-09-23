@@ -8,13 +8,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.web.WebView?>
-<?import javafx.scene.control.ProgressIndicator?>
-<?import org.controlsfx.control.MaskerPane?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
             fx:controller="navigation.controller.SearchController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+fx:id="container">
     <stylesheets>
         <URL value="@/css/search_css.css"></URL>
     </stylesheets>
@@ -34,6 +39,8 @@
                 <Insets>
                     <left>5.0</left>
                     <right>5.0</right>
+                    <top>10.0</top>
+                    <bottom>10.0</bottom>
                 </Insets>
             </padding>
             <left>
@@ -44,30 +51,63 @@
                         </Insets>
                     </padding>
                     <HBox spacing="3.0" alignment="CENTER">
-                        <TextField></TextField>
-                        <JFXButton text="搜索"></JFXButton>
+                        <TextField fx:id="keyword"></TextField>
+                        <JFXButton text="搜索" fx:id="searchAction" ></JFXButton>
                     </HBox>
                     <HBox>
                         <TableView fx:id="tableView">
                             <columns>
-                                <TableColumn text="序号" fx:id="order"></TableColumn>
-                                <TableColumn text="试题" fx:id="question"></TableColumn>
-                                <TableColumn text="题型" fx:id="type"></TableColumn>
+                                <TableColumn text="序号" fx:id="order" resizable="false"></TableColumn>
+                                <TableColumn text="试题" fx:id="question" resizable="false"></TableColumn>
                             </columns>
                         </TableView>
                     </HBox>
                 </VBox>
             </left>
             <center>
-               <StackPane>
-                   <WebView fx:id="webView">
+                    <TabPane fx:id="tabPane">
+                        <tabs>
+                            <Tab text="信息" fx:id="info" closable="false">
+                                <content>
+                                    <ScrollPane fitToWidth="true" fitToHeight="true">
+                                        <VBox spacing="10.0">
+                                            <HBox>
+                                                <Text fx:id="questions"></Text>
+                                            </HBox>
+                                            <HBox>
+                                                <ImageView fx:id="picture"></ImageView>
+                                            </HBox>
+                                            <HBox>
+                                                <RadioButton text="A" fx:id="A">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="group"></ToggleGroup>
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                            </HBox>
+                                            <HBox>
+                                                <RadioButton toggleGroup="$group" text="B" fx:id="B"></RadioButton>
+                                            </HBox>
+                                            <HBox>
+                                                <RadioButton toggleGroup="$group" text="C" fx:id="C"></RadioButton>
+                                            </HBox>
+                                            <HBox>
+                                                <RadioButton toggleGroup="$group" text="D" fx:id="D"></RadioButton>
+                                            </HBox>
 
-                   </WebView>
-                   <MaskerPane fx:id="loadProgress">
+                                        </VBox>
 
-                   </MaskerPane>
-               </StackPane>
+                                    </ScrollPane>
+                                </content>
+                            </Tab>
+                            <Tab text="编辑" fx:id="edit" closable="false">
+                                <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
 
+                                    </ScrollPane>
+                                </content>
+                            </Tab>
+                        </tabs>
+                    </TabPane>
             </center>
         </BorderPane>
     </center>
